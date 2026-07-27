@@ -1,5 +1,6 @@
 // Linear Regression model.
 
+#pragma once
 #include "models.h"
 #include "matrices.h"
 
