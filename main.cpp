@@ -3,13 +3,17 @@
 #include "matrices.h"
 
 int main() {
+
+    // creating an object of the class linear regression model.
     LinearRegression<float> lr;
-    int n;
+    
+    // collecting data from the user.
+    int n; // number of data points.
     std::cout << "Enter the size : ";
     std::cin >> n;
     
-    int no_of_var;
-    std::cout << "Enter the number of varibles : ";
+    int no_of_var; // number of features.
+    std::cout << "Enter the number of varibles/features : ";
     std::cin >> no_of_var;
 
     std::vector<std::vector<float>> data(n, std::vector<float> (no_of_var + 1));
@@ -21,25 +25,27 @@ int main() {
         }
     }
 
-    lr.points = data;
+    lr.points = data; // storing the collected data in the data member of the class linear regression.
 
-    int epoch;
+    int epoch; // a hyperparameter which tells how many times to iterate the entire data.
     std::cout << "Enter epoch : ";
     std::cin >> epoch;
 
     std::vector<std::vector<float>> weight(1, std::vector<float> (no_of_var));
     float bias = 0;
-    float L;
+    
+    float L; // a hyperparameter which tells speed of the weight and the bias change.
     std::cout << "Enter learning rate(alpha) : ";
     std::cin >> L;
     std::pair<std::vector<std::vector<float>>, float> result;
-
-    for (int i = 0 ; i < epoch ; i++) {
+    
+    for (int i = 0 ; i < epoch ; i++) { // traversing entire data epoch times.
         result = lr.gradient_descent(weight, bias, L);
         weight = result.first;
         bias = result.second;
     }
-
+    
+    // printing weights and the bias.
     std::cout << "weights : ";
     for (auto& ele : weight[0]) {
         std::cout << ele << " ";
