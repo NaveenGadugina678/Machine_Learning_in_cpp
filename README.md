@@ -62,11 +62,17 @@ where $\alpha$ is the learning rate.
 
 ```
 Machine_Learning_in_cpp/
-├── config.h               # Core header inclusions (<iostream>, <vector>, <cmath>, etc.)
-├── matrices.h             # Templated matrix operation functions (multiplication, subtraction, scalar ops)
-├── models.h               # Class declarations for ML models (LinearRegression template class)
-├── linear_regression.cpp  # Implementation of MSE loss function and Gradient Descent optimization
-└── main.cpp               # Interactive main program for dataset input, training, and inference
+├── CMakeLists.txt
+├── examples
+│   └── main.cpp
+├── include
+│   ├── config.h
+│   ├── matrices.h
+│   └── models.h
+├── README.md
+└── src
+    └── linear_regression.cpp
+
 ```
 
 ---
