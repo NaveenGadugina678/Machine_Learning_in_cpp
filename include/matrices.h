@@ -86,4 +86,26 @@ namespace matrix {
 
         return B;
     }
+    
+    // Euclidean Distance.
+    template <typename T>
+    T euclidean_distance(const std::vector<T>& A, const std::vector<T>& B) {
+
+        // error throwing.
+        if (A.size() != B.size()) {
+            throw std::invalid_argument("Dimensions of two vectors are not matching.");
+        }
+        
+        size_t n = A.size();
+        T distance = 0;
+
+        for (size_t i = 0 ; i < n ; i++) { // traversing ai's and bi's.
+            distance += pow(A[i] - B[i], 2);
+        }
+
+        distance = sqrt(distance);
+        
+        return distance;
+    }
+
 }
