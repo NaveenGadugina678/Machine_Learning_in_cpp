@@ -16,4 +16,23 @@ class LinearRegression {
         std::pair<std::vector<std::vector<T>>, T> gradient_descent(const std::vector<std::vector<T>>& w_now, T b_now, T L);
 };
 
+// Logistic Regresion model.
+template <typename T>
+class LogisticRegression {
+    public:
+        std::vector<std::vector<T>> points;
+};
+
+// K-Nearest neighbor classifier.
+template <typename T>
+class KNearestNeighbor{
+    public:
+        std::vector<std::vector<std::vector<T>>> points;
+
+        T predict(const std::vector<T>& A, T k = 3); 
+};
+
+
+#include "../src/logistic_regression.cpp"
 #include "../src/linear_regression.cpp"
+#include "../src/k_nearest_neighbor_classification.cpp"
