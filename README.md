@@ -1,4 +1,4 @@
-# 🤖 Machine Learning in C++
+# Machine Learning in C++
 
 A lightweight, from-scratch C++ implementation of fundamental Machine Learning algorithms and linear algebra utilities. Built with modern, templated C++ for high efficiency, flexibility, and zero external dependencies.
 
@@ -8,7 +8,7 @@ A lightweight, from-scratch C++ implementation of fundamental Machine Learning a
 
 ---
 
-## 📌 Overview
+## Overview
 
 This repository provides an educational and modular foundation for Machine Learning implemented entirely from scratch in C++. It includes custom matrix linear algebra operations, model declarations, loss function calculation, and parameter optimization via Gradient Descent.
 
@@ -16,28 +16,28 @@ Whether you're exploring how machine learning algorithms work under the hood or 
 
 ---
 
-## ✨ Features
+## Features
 
-- 🧮 **Custom Matrix Engine (`namespace matrix`)**:
+- **Custom Matrix Engine (`namespace matrix`)**:  
   - Matrix multiplication (`matrix::multiplication`)
   - Matrix subtraction (`matrix::subtraction`)
   - Scalar multiplication (`matrix::scalar_multiplication`)
   - Template-based numerical operations supporting `float`, `double`, etc.
   - Dimension compatibility checks with `std::invalid_argument` error throwing.
 
-- 📈 **Multivariate Linear Regression (`LinearRegression<T>`)**:
+- **Multivariate Linear Regression (`LinearRegression<T>`)**:
   - Support for multi-feature datasets ($X_1, X_2, \dots, X_m$).
   - **Mean Squared Error (MSE)** loss computation (`loss_function`).
   - Analytical **Gradient Descent** optimization (`gradient_descent`) updating weight row vector ($W$) and bias scalar ($b$).
 
-- 💻 **Interactive CLI Application (`main.cpp`)**:
+- **Interactive CLI Application (`main.cpp`)**:
   - Prompts for dataset size ($N$), feature count ($m$), training data (features + target), epochs, and learning rate ($L$).
   - Trains model using iterative gradient descent and outputs final weights and bias.
   - Includes interactive prediction loop to test trained models on fresh input features ($X_{\text{test}}$).
 
 ---
 
-## 📐 Mathematical Formulation
+##  Mathematical Formulation
 
 ### 1. Hypothesis Function
 For a dataset sample with $m$ features represented as a column vector $X \in \mathbb{R}^{m \times 1}$ and weight row vector $W \in \mathbb{R}^{1 \times m}$:
@@ -58,7 +58,7 @@ $$b_{\text{new}} = b_{\text{old}} - L \cdot \frac{\partial J}{\partial b}$$
 
 ---
 
-## 📁 Repository Structure
+##  Repository Structure
 
 ```
 Machine_Learning_in_cpp/
@@ -71,7 +71,7 @@ Machine_Learning_in_cpp/
 
 ---
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Prerequisites
 - Any modern C++ compiler supporting C++11 or higher (`g++`, `clang++`, or MSVC).
@@ -97,7 +97,7 @@ Machine_Learning_in_cpp/
 
 ---
 
-## 💡 Example Interactive Session
+##  Example Interactive Session
 
 ```text
 Enter the size : 4
@@ -121,7 +121,7 @@ Do you want to test [y/n]? : n
 
 ---
 
-## 🛠️ Usage as a Library
+##  Usage as a Library
 
 You can include `models.h` directly in your C++ code:
 
@@ -161,7 +161,7 @@ int main() {
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions are welcome! Potential areas for contribution include:
 - Adding new models (e.g., Logistic Regression, Neural Networks, Decision Trees).
@@ -170,6 +170,6 @@ Contributions are welcome! Potential areas for contribution include:
 
 ---
 
-## 📜 License
+##  License
 
 This project is open-source and available under the [MIT License](LICENSE).
